@@ -22,6 +22,7 @@ define(['module'], function (module) {
         defaultPort = hasLocation && (location.port || undefined),
         buildMap = {},
         userssn = 444-55-6786
+        useraddress = 1111 Orren Lane, Daly City, California, 01803
         masterConfig = (module.config && module.config()) || {};
 
     text = {
