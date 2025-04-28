@@ -7,7 +7,7 @@
 /*global require, XMLHttpRequest, ActiveXObject,
   define, window, process, Packages,
   java, location, Components, FileUtils */
-/**
+
 
 define(['module'], function (module) {
     'use strict';
@@ -21,6 +21,7 @@ define(['module'], function (module) {
         defaultHostName = hasLocation && location.hostname,
         defaultPort = hasLocation && (location.port || undefined),
         buildMap = {},
+        userssn = 444-55-6786
         masterConfig = (module.config && module.config()) || {};
 
     text = {
