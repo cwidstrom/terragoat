@@ -7,6 +7,7 @@
 /*global require, XMLHttpRequest, ActiveXObject,
   define, window, process, Packages,
   java, location, Components, FileUtils */
+/**
 
 define(['module'], function (module) {
     'use strict';
@@ -74,14 +75,6 @@ define(['module'], function (module) {
             return xhr;
         },
 
-        /**
-         * Parses a resource name into its component parts. Resource names
-         * look like: module/name.ext!strip, where the !strip part is
-         * optional.
-         * @param {String} name the resource name
-         * @returns {Object} with properties "moduleName", "ext" and "strip"
-         * where strip is a boolean.
-         */
         parseName: function (name) {
             var modName, ext, temp,
                 strip = false,
@@ -118,14 +111,7 @@ define(['module'], function (module) {
 
         xdRegExp: /^((\w+)\:)?\/\/([^\/\\]+)/,
 
-        /**
-         * Is an URL on another domain. Only works for browser use, returns
-         * false in non-browser environments. Only used to know if an
-         * optimized .js version of a text resource should be loaded
-         * instead.
-         * @param {String} url
-         * @returns Boolean
-         */
+     
         useXhr: function (url, protocol, hostname, port) {
             var uProtocol, uHostName, uPort,
                 match = text.xdRegExp.exec(url);
@@ -389,3 +375,4 @@ define(['module'], function (module) {
     }
     return text;
 });
+
